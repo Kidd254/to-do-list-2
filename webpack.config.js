@@ -5,8 +5,23 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js',
-    print: './src/output.js',
+     index: {
+
+      import: './src/index.js',
+
+      dependOn: 'shared',
+
+    },
+
+    output: {
+
+      import: './src/output.js',
+
+      dependOn: 'shared',
+
+    },
+
+    shared: './src/style.css',
   },
   devtool: 'inline-source-map',
 
@@ -44,6 +59,13 @@ module.exports = {
         test: /\.css$/i,
 
         use: ['style-loader', 'css-loader'],
+
+      },
+      {
+
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+
+        type: 'asset/resource',
 
       },
 
