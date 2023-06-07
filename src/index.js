@@ -4,11 +4,10 @@ import Enter from './enter.png';
 import Todo from './modules/todo.js';
 import { appendToDOM } from './modules/changeDom.js';
 import createDisplayElement from './modules/displayList.js';
-import clearAllCompletedHandler from './modules/clearcompleted.js';
+import clearAllCompletedHandler from './modules/clearCompleted.js';
 import { retrieveData } from './modules/localStorage.js';
 import { addTodoForm, addTodoFormHandler } from './modules/addToList.js';
 import updateTodoHandler from './modules/updateTodoHandler.js';
-
 
 const loadElements = () => {
   let taskArray = [];
