@@ -1,7 +1,7 @@
 {
   "name": "webpack",
   "version": "1.0.0",
-  "description": "",
+  "description": "<a name=\"readme-top\"></a> <div align=\"center\">   <h3><b>Awesome Books</b></h3> </div>",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
