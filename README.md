@@ -9,6 +9,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -46,6 +47,16 @@
 - **Manage collections with Class javascript**
 - **webpack**
 - **Single page application approach**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [a link to the online version](https://kidd254.github.io/to-do-list-2/dist/)
+
+- [a link to a presentation about this project]()
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
