@@ -30,4 +30,5 @@ export const storeData = (todosArray) => {
     const jsonData = JSON.stringify(todosArray);
     availableStorage.setItem('todos', jsonData);
   }
+  return availableStorage;
 };

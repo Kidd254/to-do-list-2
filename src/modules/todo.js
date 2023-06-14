@@ -2,7 +2,6 @@ import { storeData, retrieveData } from './localStorage.js';
 
 let newListArray = [];
 
-
 export default class Todo {
   constructor(description, completed, index) {
     this.description = description;
@@ -16,15 +15,16 @@ export default class Todo {
     return todo;
   }
 
-  static addTodo = (todo) => {
+  addTodo = () => {
     const newTodo = new Todo(
-      todo.description,
-      todo.completed,
-      todo.index,
+      this.description,
+      this.completed,
+      this.index,
     );
-    const testArray = retrieveData();
-    testArray.push(newTodo);
-    return storeData(testArray);
+    const todosArray = retrieveData();
+    todosArray.push(newTodo);
+    storeData(todosArray);
+    return todosArray;
   }
 
   static updateTodo = (todo) => {
