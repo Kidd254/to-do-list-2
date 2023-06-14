@@ -4,7 +4,7 @@
   "description": "<a name=\"readme-top\"></a> <div align=\"center\">   <h3><b>Awesome Books</b></h3> </div>",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack"
@@ -21,6 +21,7 @@
     "eslint-plugin-import": "^2.27.5",
     "hint": "^7.1.8",
     "html-webpack-plugin": "^5.5.1",
+    "jest-environment-jsdom": "^29.5.0",
     "style-loader": "^3.3.3",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",

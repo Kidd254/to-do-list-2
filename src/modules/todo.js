@@ -2,6 +2,7 @@ import { storeData, retrieveData } from './localStorage.js';
 
 let newListArray = [];
 
+
 export default class Todo {
   constructor(description, completed, index) {
     this.description = description;
