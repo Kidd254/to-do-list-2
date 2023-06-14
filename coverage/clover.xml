@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1686777975064" clover="3.2.0">
-  <project timestamp="1686777975065" name="All files">
-    <metrics statements="54" coveredstatements="35" conditionals="13" coveredconditionals="3" methods="15" coveredmethods="6" elements="82" coveredelements="44" complexity="0" loc="54" ncloc="54" packages="1" files="3" classes="3"/>
+<coverage generated="1686780537317" clover="3.2.0">
+  <project timestamp="1686780537317" name="All files">
+    <metrics statements="54" coveredstatements="36" conditionals="13" coveredconditionals="3" methods="15" coveredmethods="7" elements="82" coveredelements="46" complexity="0" loc="54" ncloc="54" packages="1" files="3" classes="3"/>
     <file name="changeDom.js" path="C:\Users\Lawrence\Microverse-Program\Module-Two\week-three\to-do-list-2\src\modules\changeDom.js">
-      <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
-      <line num="7" count="0" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
     </file>
     <file name="localStorage.js" path="C:\Users\Lawrence\Microverse-Program\Module-Two\week-three\to-do-list-2\src\modules\localStorage.js">
       <metrics statements="22" coveredstatements="18" conditionals="13" coveredconditionals="3" methods="3" coveredmethods="3"/>
