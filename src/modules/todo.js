@@ -37,6 +37,7 @@ export default class Todo {
     );
     newListArray.push(newTodo);
     storeData(newListArray);
+    return newListArray;
   }
 
   removeTodo = (index) => {
