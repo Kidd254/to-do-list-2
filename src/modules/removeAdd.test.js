@@ -111,14 +111,4 @@ describe('clear all completed', () => {
     expect(newUpdatedArr).toHaveLength(1);
   });
 
-  /* test('clear 2 completed tasks in local storage from 4 tasks', () => {
-    // Arrange
-    task4.completed = false;
-    task3.completed = false;
-    const modifiedArray = [task1, task2, task3, task4];
-    // Act
-    const newUpdatedArr = Todo.clearAllCompletedTask(modifiedArray);
-    // Assert
-    expect(newUpdatedArr).toHaveLength(2);
-  }); */
 });
