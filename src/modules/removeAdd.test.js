@@ -88,20 +88,20 @@ describe('clear all completed', () => {
   const taskList = [
     {
       description: 'task 1',
-      completed:true,
+      completed: true,
       index: 0,
     },
     {
       description: 'task 2',
-      completed:true,
+      completed: true,
       index: 1,
     },
     {
       description: 'task 3',
-      completed:false,
+      completed: false,
       index: 2,
     },
-  ]
+  ];
   test('clear All 2 completed tasks in local storage', () => {
     // Act
     const myTask = new Todo();
@@ -110,5 +110,4 @@ describe('clear all completed', () => {
     // Assert
     expect(newUpdatedArr).toHaveLength(1);
   });
-
 });
