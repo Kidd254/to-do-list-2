@@ -49,4 +49,19 @@ export default class Todo {
     });
     return storeData(reIndexedArray);
   }
+
+  clearAllCompletedTask = (tasksArray) => {
+    let tasks = tasksArray;
+    tasks.forEach((element) => {
+      if (element.completed) {
+        tasks = tasks.filter((task) => task.index.toString() !== element.index.toString());
+      }
+    });
+    const reIndexedArray = [];
+    tasks.sort((x, y) => x.index - y.index).forEach((element, index) => {
+      reIndexedArray.push(new Todo(element.description, element.completed, index + 1));
+    });
+    return storeData(reIndexedArray);
+  }
+
 }
