@@ -47,7 +47,7 @@ describe('Edit task description', () => {
   test('task element to be updated is being sent', () => {
     const taskArr = [{ description: 'test', completed: false, index: 1 }];
     const myTask = new Todo('Example Task', false, 1);
-    const testArray = myTask.updateTodo({ description: 'test', completed: false, index: 1 }); 
+    const testArray = myTask.updateTodo({ description: 'test', completed: false, index: 1 });
     const { description } = testArray[0];
     expect(description).toEqual(taskArr[0].description);
   });
@@ -58,5 +58,4 @@ describe('Edit task description', () => {
     const { description } = testArray[0];
     expect(description).toBe('updatedDescription');
   });
-
 });
