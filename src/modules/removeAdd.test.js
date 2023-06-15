@@ -3,7 +3,7 @@
  */
 
 import Todo from './todo.js';
-import { appendToDOM, removeFromDOM } from './changeDom.js';
+import { appendToDOM, removeFromDOM, removeAllCompletedFromDOM } from './changeDom.js';
 
 const newElement = document.createElement('li');
 const myTodo = new Todo('Example Task', false, 1);
@@ -88,20 +88,20 @@ describe('clear all completed', () => {
   const taskList = [
     {
       description: 'task 1',
-      completed:true,
+      completed: true,
       index: 0,
     },
     {
       description: 'task 2',
-      completed:true,
+      completed: true,
       index: 1,
     },
     {
       description: 'task 3',
-      completed:false,
+      completed: false,
       index: 2,
     },
-  ]
+  ];
   test('clear All 2 completed tasks in local storage', () => {
     // Act
     const myTask = new Todo();
@@ -110,5 +110,21 @@ describe('clear all completed', () => {
     // Assert
     expect(newUpdatedArr).toHaveLength(1);
   });
+});
 
+test('clear all completed tasks in DOM', () => {
+  document.body.innerHTML = `
+    <div>
+      <ul id="taskList">
+        <li id="1" class='completed'></li>
+        <li id="2" class='completed'></li>
+        <li id="3"></li>
+        <li id="4"></li>
+      </ul>
+    </div>
+    `;
+  const taskList = document.querySelectorAll('#taskList li');
+  removeAllCompletedFromDOM(taskList);
+  const remainList = document.querySelectorAll('#taskList li');
+  expect(remainList).toHaveLength(2);
 });
