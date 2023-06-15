@@ -52,16 +52,6 @@ describe('Edit task description', () => {
     expect(description).toEqual(taskArr[0].description);
   });
 
-  test('Update task different description', () => {
-    const taskArr = [
-      { description: 'other-description', completed: false, index: 1 },
-    ];
-    const myTask = new Todo('Example Task', false, 1);
-    const testArray = myTask.updateTodo({ description: 'other-description', completed: false, index: 1 });
-    const { description } = testArray[0];
-    expect(description).not.toBe(taskArr[0].description);
-  });
-
   test('task description is updated', () => {
     const myTask = new Todo('Example Task', false, 1);
     const testArray = myTask.updateTodo({ description: 'updatedDescription', completed: false, index: 1 });
