@@ -84,15 +84,31 @@ describe('edit task completion using  checkbox', () => {
 });
 
 describe('clear all completed', () => {
-  // Arrange
-  const completedTask = { ...myTodo };
-  completedTask.completed = true;
-  test('clear All Four(4) completed tasks in local storage', () => {
+  // Arran
+  const taskList = [
+    {
+      description: 'task 1',
+      completed:true,
+      index: 0,
+    },
+    {
+      description: 'task 2',
+      completed:true,
+      index: 1,
+    },
+    {
+      description: 'task 3',
+      completed:false,
+      index: 2,
+    },
+  ]
+  test('clear All 2 completed tasks in local storage', () => {
     // Act
     const myTask = new Todo();
-    const newUpdatedArr = myTask.clearAllCompletedTask(completedTask);
+
+    const newUpdatedArr = myTask.clearAllCompletedTask(taskList);
     // Assert
-    expect(newUpdatedArr).toHaveLength(0);
+    expect(newUpdatedArr).toHaveLength(1);
   });
 
   /* test('clear 2 completed tasks in local storage from 4 tasks', () => {
