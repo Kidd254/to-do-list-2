@@ -83,21 +83,19 @@ describe('edit task completion using  checkbox', () => {
   });
 });
 
-/*describe('clear all completed', () => {
+describe('clear all completed', () => {
   // Arrange
-  const task1 = new Todo('test1', true, 1);
-  const task2 = new Todo('test2', true, 2);
-  const task3 = new Todo('test3', true, 3);
-  const task4 = new Todo('test3', true, 4);
-  const modifiedArray = [task1, task2, task3, task4];
+  const completedTask = { ...myTodo };
+  completedTask.completed = true;
   test('clear All Four(4) completed tasks in local storage', () => {
     // Act
-    const newUpdatedArr = Todo.clearAllCompletedTask(modifiedArray);
+    const myTask = new Todo();
+    const newUpdatedArr = myTask.clearAllCompletedTask(completedTask);
     // Assert
     expect(newUpdatedArr).toHaveLength(0);
   });
 
-  test('clear 2 completed tasks in local storage from 4 tasks', () => {
+  /* test('clear 2 completed tasks in local storage from 4 tasks', () => {
     // Arrange
     task4.completed = false;
     task3.completed = false;
@@ -106,5 +104,5 @@ describe('edit task completion using  checkbox', () => {
     const newUpdatedArr = Todo.clearAllCompletedTask(modifiedArray);
     // Assert
     expect(newUpdatedArr).toHaveLength(2);
-  });
-});*/
+  }); */
+});

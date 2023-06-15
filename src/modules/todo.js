@@ -63,5 +63,4 @@ export default class Todo {
     });
     return storeData(reIndexedArray);
   }
-
 }
