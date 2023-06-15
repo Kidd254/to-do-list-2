@@ -9,7 +9,7 @@ export default class Todo {
     this.index = index;
   }
 
-  static getTodo = (index) => {
+  getTodo = (index) => {
     newListArray = retrieveData();
     const todo = newListArray.find((x) => x.index.toString() === index.toString());
     return todo;
@@ -27,7 +27,7 @@ export default class Todo {
     return todosArray;
   }
 
-  static updateTodo = (todo) => {
+  updateTodo = (todo) => {
     newListArray = retrieveData();
     newListArray = newListArray.filter((element) => element.index !== todo.index);
     const newTodo = new Todo(
@@ -39,7 +39,7 @@ export default class Todo {
     storeData(newListArray);
   }
 
-  static removeTodo = (index) => {
+  removeTodo = (index) => {
     newListArray = retrieveData();
     newListArray = newListArray.filter((element) => element.index.toString() !== index.toString());
     const reIndexedArray = [];

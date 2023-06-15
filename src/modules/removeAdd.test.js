@@ -42,3 +42,30 @@ describe('delete task', () => {
     expect(taskList).toHaveLength(0);
   });
 });
+
+describe('Edit task description', () => {
+  test('task element to be updated is being sent', () => {
+    const taskArr = [{ description: 'test', completed: false, index: 1 }];
+    const myTodo = new Todo('Example Task', false, 1);
+    const testArray = myTodo.updateTodo({ description: 'test', completed: false, index: 1 });
+    const { description } = testArray[0];
+    expect(description).toEqual(taskArr[0].description);
+  });
+
+  test('Update task different description', () => {
+    const taskArr = [
+      { description: 'other-description', completed: false, index: 1 },
+    ];
+    const myTodo = new Todo('Example Task', false, 1);
+    const testArray = myTodo.updateTodo({ description: 'other-description', completed: false, index: 1 });
+    const { description } = testArray[0];
+    expect(description).not.toBe(taskArr[0].description);
+  });
+
+  test('task description is updated', () => {
+    const myTodo = new Todo('Example Task', false, 1);
+    const testArray = myTodo.updateTodo({ description: 'updatedDescription', completed: false, index: 1 });
+    const { description } = testArray[0];
+    expect(description).toBe('updatedDescription');
+  });
+});
