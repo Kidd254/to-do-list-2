@@ -9,7 +9,7 @@ export default class Todo {
     this.index = index;
   }
 
-  static getTodo = (index) => {
+  getTodo = (index) => {
     newListArray = retrieveData();
     const todo = newListArray.find((x) => x.index.toString() === index.toString());
     return todo;
@@ -27,7 +27,7 @@ export default class Todo {
     return todosArray;
   }
 
-  static updateTodo = (todo) => {
+  updateTodo = (todo) => {
     newListArray = retrieveData();
     newListArray = newListArray.filter((element) => element.index !== todo.index);
     const newTodo = new Todo(
@@ -37,13 +37,28 @@ export default class Todo {
     );
     newListArray.push(newTodo);
     storeData(newListArray);
+    return newListArray;
   }
 
-  static removeTodo = (index) => {
+  removeTodo = (index) => {
     newListArray = retrieveData();
     newListArray = newListArray.filter((element) => element.index.toString() !== index.toString());
     const reIndexedArray = [];
     newListArray.sort((x, y) => x.index - y.index).forEach((element, index) => {
+      reIndexedArray.push(new Todo(element.description, element.completed, index + 1));
+    });
+    return storeData(reIndexedArray);
+  }
+
+  clearAllCompletedTask = (tasksArray) => {
+    let tasks = tasksArray;
+    tasks.forEach((element) => {
+      if (element.completed) {
+        tasks = tasks.filter((task) => task.index.toString() !== element.index.toString());
+      }
+    });
+    const reIndexedArray = [];
+    tasks.sort((x, y) => x.index - y.index).forEach((element, index) => {
       reIndexedArray.push(new Todo(element.description, element.completed, index + 1));
     });
     return storeData(reIndexedArray);
